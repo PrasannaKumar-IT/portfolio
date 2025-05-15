@@ -1,0 +1,120 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- AOS CSS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+<section class="project-section py-5" style="background-color: #f9f9f9;" >
+    <div class="container">
+        <h2 class="text-center fw-bold mb-4" data-aos="fade-up">Final Year Project: Next-CS</h2>
+        <p class="text-center lead mb-5" data-aos="fade-up">A Comprehensive Career Guidance Platform for Computer Science Students and Fresh Graduates</p>
+
+        <!-- Project Introduction -->
+        <div class="row align-items-center mb-5" data-aos="fade-up">
+            <div class="col-md-6">
+                <img src="{% static 'images/project1/logo.png' %}" alt="Next-CS Platform" class="img-fluid rounded" data-aos="zoom-in">
+            </div>
+            <div class="col-md-6">
+                <h4 class="fw-bold">🔍 Project Overview</h4>
+                <p>Next-CS is a one-stop career platform tailored for CS students and graduates. It bridges the gap between learning and employment by offering career resources, self-assessment tools, peer interaction, and real-time job listings — all within a unified platform.</p>
+            </div>
+        </div>
+
+        <!-- Key Features -->
+        <h4 class="fw-bold text-primary mb-4" data-aos="fade-up">🚀 Key Features</h4>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 p-3" data-aos="zoom-in">
+                    <h5 class="fw-semibold mb-2">📊 Personalized Dashboard</h5>
+                    <p>Dynamic dashboard with tailored job insights, career suggestions, and skill progress tracking.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 p-3" data-aos="zoom-in">
+                    <h5 class="fw-semibold mb-2">🧠 Quiz Hub</h5>
+                    <p>Subject-wise quizzes in HTML, CSS, Python, DBMS, and more to evaluate knowledge and learning gaps.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 p-3" data-aos="zoom-in">
+                    <h5 class="fw-semibold mb-2">📚 Learning Hub</h5>
+                    <p>Structured roadmaps, curated books, YouTube tutorials, and online courses — all organized by domain.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 p-3" data-aos="zoom-in">
+                    <h5 class="fw-semibold mb-2">📝 Resume Builder</h5>
+                    <p>Create, preview, and download professional resumes using intuitive form-based templates.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 p-3" data-aos="zoom-in">
+                    <h5 class="fw-semibold mb-2">🤝 Connect Campus</h5>
+                    <p>Engage with peers via request system and private 1-to-1 chat. Builds community and peer support.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 shadow-sm border-0 p-3" data-aos="zoom-in">
+                    <h5 class="fw-semibold mb-2">💼 Job Search Integration</h5>
+                    <p>Aggregates real-time job listings from public APIs like GitHub Jobs and RemoteOK, with filters and links.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technology Stack -->
+        <div class="mt-5">
+            <h4 class="fw-bold text-primary" data-aos="fade-up">🛠️ Technologies Used</h4>
+            <ul class="list-group list-group-flush" data-aos="zoom-in">
+                <li class="list-group-item">Frontend: HTML5, CSS3, JavaScript, Bootstrap</li>
+                <li class="list-group-item">Backend: Django Framework (Python)</li>
+                <li class="list-group-item">Database: MySQL</li>
+                <li class="list-group-item">API Integration: RemoteOK API, GitHub Jobs API</li>
+                <li class="list-group-item">Version Control: Git & GitHub</li>
+            </ul>
+        </div>
+
+        <!-- Screenshots Section -->
+        <div class="mt-5">
+            <h4 class="fw-bold text-primary" data-aos="fade-up">🖼️ Screenshots Preview</h4>
+            <p>(Note: Only sample images available. Live demo not included.)</p>
+            <div class="row g-3">
+                <div class="col-sm-6 col-md-4">
+                    <img src="{% static 'images/project1/dashboard.png' %}" class="img-fluid rounded shadow-sm" alt="Dashboard" data-aos="zoom-in">
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <img src="{% static 'images/project1/learning hub.png' %}" class="img-fluid rounded shadow-sm" alt="Learning Hub" data-aos="zoom-in">
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <img src="{% static 'images/project1/quiz hub.png' %}" class="img-fluid rounded shadow-sm" alt="Quiz Hub" data-aos="zoom-in">
+                </div>
+            </div>
+            <div class="row g-3 " style="margin-top: 20px;">
+                <div class="col-sm-6 col-md-4">
+                    <img src="{% static 'images/project1/job.png' %}" class="img-fluid rounded shadow-sm" alt="Job Search" data-aos="zoom-in">
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <img src="{% static 'images/project1/resume.png' %}" class="img-fluid rounded shadow-sm" alt="resume builder" data-aos="zoom-in">
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <img src="{% static 'images/project1/connect.png' %}" class="img-fluid rounded shadow-sm" alt="Connect Campus" data-aos="zoom-in">
+                </div>
+            </div>
+        </div>
+    </div>  
+</section>
+<div class="mt-5 text-center" data-aos="zoom-in">
+            <h4 class="fw-bold text-primary mb-3">Project Repository</h4>
+            <p class="mb-3">You can explore the full source code, commits, and structure of the Next-CS project on GitHub.</p>
+            <a href="https://github.com/PrasannaKumar-IT/Next_CS" target="_blank" class="btn btn-success px-4 py-2 shadow-sm" data-aos="zoom-in">
+                <i class="bi bi-github me-2"></i> View on GitHub
+            </a>
+        </div>
+    </div>
+
+    <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true, duration: 800 });
+</script>
+{% endblock %}

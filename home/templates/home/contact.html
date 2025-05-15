@@ -1,0 +1,47 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- AOS CSS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+<section class="contact-section py-5" style="background-color: #f8f9fa;" data-aos="fade-up">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4" data-aos="fade-up">📬 Contact Me</h2>
+    <p class="text-center mb-5">Feel free to reach out for collaborations or queries.</p>
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <form method="POST" class="p-4 shadow rounded bg-white">
+          {% csrf_token %}
+          {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-success" data-aos="zoom-in">{{ message }}</div>
+            {% endfor %}
+          {% endif %}
+          <div class="mb-3">
+            <label for="name" class="form-label" data-aos="fade-up">Your Name</label>
+            <input type="text" name="name" class="form-control" required data-aos="zoom-in">
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label" data-aos="fade-up">Your Email</label>
+            <input type="email" name="email" class="form-control" required data-aos="zoom-in">
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label" data-aos="fade-up">Subject</label>
+            <input type="text" name="subject" class="form-control" required data-aos="zoom-in">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label" data-aos="fade-up">Message</label>
+            <textarea name="message" rows="5" class="form-control" required data-aos="zoom-in"></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary px-5" data-aos="zoom-in">Send Message</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ once: true, duration: 800 });</script>
+{% endblock %}

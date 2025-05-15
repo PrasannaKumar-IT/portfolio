@@ -1,0 +1,148 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- AOS CSS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+<style>
+  .section-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  }
+
+  .section-title {
+    font-weight: 600;
+    color: #0d6efd;
+    margin-bottom: 1.25rem;
+  }
+
+  .info-badge {
+    display: inline-block;
+    background-color: #e9f2ff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin: 0.3rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+</style>
+
+<section class="py-5">
+  <div class="container">
+
+    <!-- Intro -->
+    <div class="row align-items-center mb-5 section-card" data-aos="fade-up">
+      <div class="col-md-5 text-center mb-4 mb-md-0" data-aos="zoom-in">
+        <img src="{% static 'images/my pic.jpg' %}" alt="Profile" class="img-fluid rounded shadow" style="max-width: 300px;" >
+      </div>
+      <div class="col-md-7">
+        <h2 class="section-title">Hi, I'm Prasanna Kumar</h2>
+        <p class="lead">A passionate full-stack developer and M.Sc. IT graduate from Annamalai University (2025), with strong skills in Django, Python, MySQL, and JavaScript.</p>
+        <p>I focus on building real-world solutions and actively participate in internships, workshops, and team projects to stay hands-on and grow continuously.</p>
+        <a href="{% static 'resume/PrasannaKumar_Resume.pdf' %}" class="btn btn-primary mt-3" download data-aos="zoom-in">
+          <i class="fas fa-download me-2"></i>Download Resume
+        </a>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="mb-5 section-card" data-aos="fade-up">
+      <h3 class="section-title">Education</h3>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <strong>M.Sc. Information Technology</strong> – Annamalai University<br>
+          2020–2025 | CGPA: 9.03
+        </li>
+        <li class="list-group-item">
+          <strong>HSC</strong> – John Dewey Hr. Sec. School, Panruti (2018–2020)<br>
+          Percentage: 77%
+        </li>
+        <li class="list-group-item">
+          <strong>SSLC</strong> – John Dewey Hr. Sec. School, Panruti (2017–2018)<br>
+          Percentage: 86.8%
+        </li>
+      </ul>
+    </div>
+
+    <!-- Projects -->
+    <div class="mb-5 section-card" data-aos="fade-up">
+      <h3 class="section-title">Projects</h3>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+          <strong>Career Guidance Platform</strong><br>
+          Django, HTML, CSS, JS, MySQL – For personalized CS career planning (Jan–Jul 2025)
+        </li>
+        <li class="list-group-item">
+          <strong>Craft Studio – Full-Stack E-commerce Platform (Stationery Shop)</strong><br>
+          Developed a fully functional e-commerce web application for a stationery shop using Django and MySQL, with a modern frontend powered by HTML, CSS, Bootstrap, and JavaScript.(Jan–Jul 2025)
+        </li>
+      </ul>
+    </div>
+
+    <!-- Internship -->
+    <div class="mb-5 section-card" data-aos="fade-up">
+      <h3 class="section-title">Internship</h3>
+      <p>
+        <strong>Web Development Trainee</strong> – Endless Spark (Jan–Feb 2025, Coimbatore)<br>
+        Contributed to Django modules using HTML, CSS, JS, and backend logic in real client tasks.
+      </p>
+    </div>
+
+    <!-- Achievements -->
+    <div class="mb-5 section-card" data-aos="fade-up">
+      <h3 class="section-title">Achievements</h3>
+      <ul>
+        <li>Winner – Intra-department Quiz (2023, 2024)</li>
+        <li>Winner – Intra-department Football (2023, 2024)</li>
+      </ul>
+    </div>
+
+     <!-- Workshop -->
+    <div class="mb-5 section-card" data-aos="fade-up">
+      <h3 class="section-title">Workshop</h3>
+      <p>Attended Full Stack Development Workshop at Computer Software College, Chidambaram (2024).</p>
+    </div>
+
+
+    <!-- Skills Section -->
+<section class="py-5 bg-white" data-aos="zoom-in">
+  <div class="container">
+    <h2 class="text-center mb-5">Soft Skills</h2>
+    <div class="row justify-content-center g-4">
+      {% for skill in skills %}
+      <div class="col-6 col-md-3 col-lg-3">
+        <div class="border rounded text-center p-4 bg-light shadow-sm h-100 d-flex align-items-center justify-content-center ">
+          <span class="fw-semibold text-uppercase ">{{ skill }}</span>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+    <!-- Responsibility -->
+    <div class="mb-5 section-card" data-aos="fade-up">
+      <h3 class="section-title">Positions of Responsibility</h3>
+      <ul>
+        <li>Poster Designer – Unity of Youth Foundation (2023–2025)</li>
+        <li>Social Media In-Charge – Unity of Youth Foundation (2024)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="text-center py-5" data-aos="fade-up">
+  <div class="container">
+    <h2 class="mb-3">Open to Internship & Junior Developer Roles</h2>
+    <p class="lead mb-4">Motivated and dependable — eager to join a team where I can learn and contribute.</p>
+    <a href="{% url 'contact' %}" class="btn btn-success btn-lg px-5" data-aos="zoom-in">Hire Me</a>
+  </div>
+</section>
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init({ once: true, duration: 800 });</script>
+{% endblock %}

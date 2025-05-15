@@ -1,0 +1,119 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- AOS CSS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+<section class="project-section py-5" style="background-color: #f9f9f9;">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4" data-aos="fade-up">Project: Craft Studio</h2>
+    <p class="text-center lead mb-5" data-aos="fade-up">A Full-Stack E-commerce Platform for a Stationery Shop</p>
+
+    <!-- Project Overview -->
+    <div class="row align-items-center mb-5" data-aos="fade-up">
+      <div class="col-md-6">
+        <img src="{% static 'images/project2/stationary.png' %}" alt="Craft Studio UI" class="img-fluid rounded" data-aos="zoom-in">
+      </div>
+      <div class="col-md-6">
+        <h4 class="fw-bold">🔍 Project Overview</h4>
+        <p>Craft Studio is a fully functional e-commerce web application built for a stationery shop. It includes category-based product listings, a secure shopping cart, user account system, and an intuitive checkout process — delivering a complete online shopping experience using Django and MySQL.</p>
+      </div>
+    </div>
+
+<!-- Key Features -->
+<h4 class="fw-bold text-primary mb-4" data-aos="fade-up">🚀 Key Features</h4>
+<div class="row g-4">
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 shadow-sm border-0 p-3" data-aos="zoom-in">
+      <h5 class="fw-semibold mb-2">🔐 User Authentication</h5>
+      <p>Signup, login, and logout functionalities with secure session management and access control.</p>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 shadow-sm border-0 p-3" data-aos="zoom-in">
+      <h5 class="fw-semibold mb-2">📦 Dynamic Product Listing</h5>
+      <p>Category-wise item filtering (e.g., Pens, Notebooks, Art Supplies) for an organized shopping experience.</p>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 shadow-sm border-0 p-3" data-aos="zoom-in">
+      <h5 class="fw-semibold mb-2">🛒 Shopping Cart System</h5>
+      <p>Users can add/remove items, adjust quantity, and view live totals in a clean cart interface.</p>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 shadow-sm border-0 p-3" data-aos="zoom-in">
+      <h5 class="fw-semibold mb-2">📤 Order Placement</h5>
+      <p>Secure order confirmation with Cash on Delivery/UPI options and a success feedback page.</p>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 shadow-sm border-0 p-3" data-aos="zoom-in">
+      <h5 class="fw-semibold mb-2">📋 Order History</h5>
+      <p>View detailed list of past orders by date, item summary, and order status.</p>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-4">
+    <div class="card h-100 shadow-sm border-0 p-3" data-aos="zoom-in">
+      <h5 class="fw-semibold mb-2">📱 Mobile Responsive UI</h5>
+      <p>Modern, responsive layout built using Bootstrap 5 and custom CSS for smooth mobile experience.</p>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Technologies Used -->
+    <div class="mt-5">
+      <h4 class="fw-bold text-primary" data-aos="fade-up">🛠️ Technologies Used</h4>
+      <ul class="list-group list-group-flush" data-aos="zoom-in">
+        <li class="list-group-item">Backend: Django (Python)</li>
+        <li class="list-group-item">Database: MySQL</li>
+        <li class="list-group-item">Frontend: HTML5, CSS3, Bootstrap 5, JavaScript</li>
+        <li class="list-group-item">Templating Engine: Jinja2 (Django Templates)</li>
+        <li class="list-group-item">Version Control: Git, GitHub</li>
+      </ul>
+    </div>
+
+    <!-- Screenshots Preview -->
+    <div class="mt-5">
+      <h4 class="fw-bold text-primary" data-aos="fade-up">🖼️ Screenshots Preview</h4>
+      <p>(Note: Sample project UI screens shown below)</p>
+      <div class="row g-3">
+        <div class="col-sm-6 col-md-4">
+          <img src="{% static 'images/project2/home.png' %}" class="img-fluid rounded shadow-sm" alt="Home Page" data-aos="zoom-in">
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <img src="{% static 'images/project2/product.png' %}" class="img-fluid rounded shadow-sm" alt="Cart" data-aos="zoom-in">
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <img src="{% static 'images/project2/cart.png' %}" class="img-fluid rounded shadow-sm" alt="Order Page" data-aos="zoom-in">
+        </div>
+      </div>
+      <div class="row g-3 " style="margin-top: 20px;">
+                <div class="col-sm-6 col-md-4">
+                    <img src="{% static 'images/project2/History.png' %}" class="img-fluid rounded shadow-sm" alt="Job Search" data-aos="zoom-in">
+                </div>
+                <div class="col-sm-6 col-md-4">
+                    <img src="{% static 'images/project2/ordersuccess.png' %}" class="img-fluid rounded shadow-sm" alt="resume builder" data-aos="zoom-in">
+                </div>
+            </div>
+    </div>
+  </div>
+</section>
+
+<!-- GitHub Button -->
+<div class="mt-5 text-center" data-aos="zoom-in">
+  <h4 class="fw-bold text-primary mb-3">Project Repository</h4>
+  <p class="mb-3">View the full source code and structure of the Craft Studio project on GitHub.</p>
+  <a href="https://github.com/PrasannaKumar-IT/craft-studio" target="_blank" class="btn btn-success px-4 py-2 shadow-sm">
+    <i class="bi bi-github me-2"></i> View on GitHub
+  </a>
+</div>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ once: true, duration: 800 });
+</script>
+{% endblock %}
